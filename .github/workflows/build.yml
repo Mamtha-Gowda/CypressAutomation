@@ -1,10 +1,11 @@
-name: End-to-end regression tests
+name: End-to-end tests
 on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       # and run all Cypress tests
       - name: Cypress run
         # Install npm dependencies, cache them correctly
