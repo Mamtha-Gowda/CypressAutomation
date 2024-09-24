@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/grep": "^4.1.0",
     "cypress": "^13.14.2"
   }
 }
