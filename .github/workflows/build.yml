@@ -13,5 +13,12 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command: npm run test-regression
+
+
+      - name: Cypress mochaawesome Reports
+        uses: actions/upload-artifact@v4
+        with:
+         name: Moacha
+         path: path/to/artifact/ # or path/to/artifact
       
           
