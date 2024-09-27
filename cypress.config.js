@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: true,
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: "https://in.bookmyshow.com/explore/home/bengaluru",
