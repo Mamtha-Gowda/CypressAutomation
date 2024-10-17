@@ -23,3 +23,27 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//login to linkedin
+
+import { Loginpage } from "../e2e/Regression/LinkedIn/Pages/LoginPage";
+import userdata from "../fixtures/LinkedIn.json"
+
+Cypress.Commands.add('Login_with_session', () => {
+
+    //     cy.session('login',()=>{
+
+
+    //     },
+    //     {
+    //         cacheAcrossSpecs:true
+    //     }
+    // )
+
+    cy.visit('/');
+    Loginpage.elements.username().type(userdata.email);
+    Loginpage.elements.password().type(userdata.password);
+    Loginpage.elements.signin().click();
+    cy.wait(2000);
+})
+
