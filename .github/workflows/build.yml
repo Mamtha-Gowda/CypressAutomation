@@ -12,7 +12,7 @@ jobs:
 
         uses: cypress-io/github-action@v6
         with:
-          command: npm run test-regression
+          command: npm run grep-test
 
 
       - name: Cypress mochaawesome Reports

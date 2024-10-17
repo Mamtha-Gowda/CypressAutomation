@@ -4,7 +4,8 @@ module.exports = defineConfig({
   video: true,
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl: "https://in.bookmyshow.com/explore/home/bengaluru",
+    testIsolation: false,
+    baseUrl: "https://www.disneystore.com/",
     setupNodeEvents(on, config) {
       require('@cypress/grep/src/plugin')(config);
       require('cypress-mochawesome-reporter/plugin')(on);
