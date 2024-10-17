@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-regression": "npx cypress run --spec cypress/e2e/Regression/*"
+    "test-regression": "npx cypress run --spec cypress/e2e/Regression/*",
+    "grep-test": "cypress run --env grep=\"Validate\""
+
   },
   "author": "",
   "license": "ISC",
