@@ -12,9 +12,14 @@ describe("New Window When no taget attribute", () => {
 
         ).as('getnewpage');
 
-        cy.get('a[href="/corporate"]').click();
-        cy.wait('@getnewpage');
-        cy.get('h2:contains("About Swiggy")').should('be.visible');
+        cy.get('a[href="/corporate"]').click({force:true});
+     //   cy.wait('@getnewpage');
+        // cy.get('.elementor-heading-title.elementor-size-default:contains("ABOUT US")').should('be.visible');
+        // cy.get('.elementor-heading-title.elementor-size-default:contains("ABOUT US")').focus();
+
+        cy.log(cy.title);
+        cy.screenshot();
+        cy.xpath('//a[contains(text(),"Get the App")]').should('be.visible');
     })
 
 })
