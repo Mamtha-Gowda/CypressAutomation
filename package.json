@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-regression": "npx cypress run --spec cypress/e2e/Regression/*",
     "grep-test": "cypress run --env grep=\"Validate\""
-
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
-    "cypress": "^13.14.2"
+    "cypress": "^13.14.2",
+    "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
     "cypress-mochawesome-reporter": "^3.8.2"
