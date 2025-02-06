@@ -29,21 +29,28 @@
 import { Loginpage } from "../e2e/Regression/LinkedIn/Pages/LoginPage";
 import userdata from "../fixtures/LinkedIn.json"
 
-Cypress.Commands.add('Login_with_session', () => {
+Cypress.Commands.add('Login_with_session', (name,pwd) => {
 
-    //     cy.session('login',()=>{
- 
+        cy.session([name,pwd],()=>{
 
-    //     },
-    //     {
-    //         cacheAcrossSpecs:true
-    //     }
-    // )
+            cy.visit("https://demoblaze.com/");
+            cy.get("#login2").click();
+            cy.wait(2000);
+            cy.get('#loginusername').type(name);
+            cy.get('#loginpassword').type(pwd);
+            cy.get('button[onclick="logIn()"]').click();
+            cy.wait(2000);
 
-    cy.visit('/');
-    Loginpage.elements.username().type(userdata.email);
-    Loginpage.elements.password().type(userdata.password);
-    Loginpage.elements.signin().click();
-    cy.wait(2000);
+        },
+        {
+            cacheAcrossSpecs:true
+        }
+    )
+
+    // cy.visit('/');
+    // Loginpage.elements.username().type(userdata.email);
+    // Loginpage.elements.password().type(userdata.password);
+    // Loginpage.elements.signin().click();
+    // cy.wait(2000);
 })
 

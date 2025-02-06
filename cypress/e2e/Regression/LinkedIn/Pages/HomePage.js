@@ -6,8 +6,5 @@ export const HomePage = {
         profile_icon: () => cy.get('#ember16'),
         signout: () => cy.get('#ember18'),
         guest_support: () => cy.get(':nth-child(1) > .guest-services__container > .menu-group-left-color-override')
-
-
-
     }
 }
