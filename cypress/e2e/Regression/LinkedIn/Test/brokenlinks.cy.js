@@ -94,8 +94,8 @@ describe("Verify the broken links",()=>{
             cy.log(`Total number of Broken links ${brokenlink} `)
         })
 
-        cy.window().then((win)=>{
-            cy.stub(win,'close').as('close');
-        });
+        // cy.window().then((win)=>{
+        //     cy.stub(win,'close').as('close');
+        // });
     })
 })
