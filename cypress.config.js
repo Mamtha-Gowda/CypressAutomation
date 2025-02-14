@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
+const mysql = require("mysql");
 
 module.exports = defineConfig({
   video: true,
@@ -19,3 +20,6 @@ module.exports = defineConfig({
   },
   "includeShadowDom":true
 });
+
+
+
